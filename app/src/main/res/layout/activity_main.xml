@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/user_choice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/question_mark"/>
+
+    <TextView
+        android:id="@+id/user_choice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_choice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Ваш выбор"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/computer_choice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/user_choice_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/question_mark"/>
+
+    <TextView
+        android:id="@+id/computer_choice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/computer_choice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Выбор компьютера"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/computer_choice_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"/>
+
+
+    <!-- Row with three buttons -->
+    <LinearLayout
+        android:id="@+id/first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_text"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/rock_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Камень"
+            android:backgroundTint="@color/grey"
+            android:textSize="18sp"
+            android:onClick="onUserChoice"/>
+
+        <Button
+            android:id="@+id/paper_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Бумага"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/paper"
+            android:textSize="18sp"
+            android:onClick="onUserChoice"/>
+
+        <Button
+            android:id="@+id/spock_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Спок"
+            android:backgroundTint="@color/yellow"
+            android:textSize="18sp"
+            android:onClick="onUserChoice"/>
+
+
+    </LinearLayout>
+
+    <!-- Row with two buttons -->
+    <LinearLayout
+        android:id="@+id/second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_row"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/scissors_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Ножницы"
+            android:backgroundTint="@color/blue"
+            android:textSize="18sp"
+            android:onClick="onUserChoice"/>
+
+        <Button
+            android:id="@+id/lizard_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ящерица"
+            android:backgroundTint="@color/green"
+            android:textSize="18sp"
+            android:onClick="onUserChoice"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
